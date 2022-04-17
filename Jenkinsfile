@@ -3,7 +3,10 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'dotnet build eShopOnWeb.sln'
+        warnError(message: 'FUNTIONAL PROBLEMSI ERREUR ') {
+          sh 'dotnet build eShopOnWeb.sln'
+        }
+
       }
     }
 
